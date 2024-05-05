@@ -12,11 +12,11 @@
 # # Lightweight Fine-Tuning Project
 
 # TODO: In this cell, describe your choices for each of the following
-# 
-# * PEFT technique: 
-# * Model: 
-# * Evaluation approach: 
-# * Fine-tuning dataset: 
+#
+# * PEFT technique:
+# * Model:
+# * Evaluation approach:
+# * Fine-tuning dataset:
 
 # In[2]:
 
@@ -25,7 +25,7 @@
 
 
 # ## Loading and Evaluating a Foundation Model
-# 
+#
 # TODO: In the cells below, load your chosen pre-trained Hugging Face model and evaluate its performance prior to fine-tuning. This step includes loading an appropriate tokenizer and dataset.
 
 # In[3]:
@@ -69,10 +69,10 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 def tokenize(examples):
     # return_tensors="pt" ensures that the tokenized output is in pytorch tensors
-    # truncation=True ensures that all input into the model has consistent size. 
+    # truncation=True ensures that all input into the model has consistent size.
     # Padded/truncated to the max_length of the model
-    
-    return tokenizer(examples["sms"], padding="max_length", 
+
+    return tokenizer(examples["sms"], padding="max_length",
                      truncation=True, return_tensors="pt")
 
 def compute_metrics(eval_pred):
@@ -143,7 +143,7 @@ trainer.evaluate()
 
 
 # ## Performing Parameter-Efficient Fine-Tuning
-# 
+#
 # TODO: In the cells below, create a PEFT model from your loaded model, run a training loop, and save the PEFT model weights.
 
 # In[14]:
@@ -153,7 +153,7 @@ trainer.evaluate()
 ## Reference: https://github.com/huggingface/peft/blob/02ae6bcb373d9d9d3bec9ba920d63316418ff64a/src/peft/peft_model.py#L1094C7-L1094C41
 
 ## Available task types: https://huggingface.co/docs/peft/en/package_reference/peft_types
-lora_config = LoraConfig(task_type="SEQ_CLS", r=4, lora_alpha=1, 
+lora_config = LoraConfig(task_type="SEQ_CLS", r=4, lora_alpha=1,
                          lora_dropout=0, target_modules=["pre_classifier", "classifier"],
                          inference_mode=False)
 
@@ -177,6 +177,7 @@ peft_lora_model
 # Define training arguments
 peft_training_args = TrainingArguments(
     output_dir="./results",
+    overwrite_output_dir=True,
     num_train_epochs=15,
     learning_rate=2e-5,
     per_device_train_batch_size=128,
@@ -188,19 +189,19 @@ peft_training_args = TrainingArguments(
     save_strategy='epoch',
     save_safetensors=False,
     ## https://github.com/huggingface/transformers/issues/27613#issuecomment-1848645557
-    
+
     warmup_steps=500,
     weight_decay=0.01,
     load_best_model_at_end=True,
     logging_dir="./logs",
-    
-    
-    # Can play with remove_unused_columns. Initially set this to False because Trainer is returning 
+
+
+    # Can play with remove_unused_columns. Initially set this to False because Trainer is returning
     # IndexError: Invalid key: 4437 is out of bounds for size 0
     # https://discuss.huggingface.co/t/indexerror-invalid-key-16-is-out-of-bounds-for-size-0/14298/4
     remove_unused_columns=False,
 #     label_names=['label']
-    
+
     # By default, Trainer uses GPU on the device
     # However, if you want to explicitly set GPU device(s)
     # no_cuda=False,  # Set to False to enable GPU usage
@@ -217,7 +218,7 @@ peft_trainer = Trainer(
     args=peft_training_args,
 
     # We are dropping the SMS column because the size of this input column is not consistent
-    # Not removing this column will lead to 
+    # Not removing this column will lead to
     # ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`sms` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
     train_dataset=tokenized_dataset["train"].remove_columns(["sms"]),
     eval_dataset=tokenized_dataset["test"].remove_columns(["sms"]),
@@ -248,7 +249,7 @@ peft_trainer.save_model(f"./results/{MODEL_NAME}-best")
 
 
 # ## Performing Inference with a PEFT Model
-# 
+#
 # TODO: In the cells below, load the saved PEFT model weights and evaluate the performance of the trained PEFT model. Be sure to compare the results to the results from prior to fine-tuning.
 
 # In[ ]:
@@ -271,7 +272,3 @@ saved_model = AutoModelForSequenceClassification.from_pretrained(output_dir, loa
 
 
 # In[ ]:
-
-
-
-
