@@ -5,6 +5,7 @@ Update date: 06/05/2024
 Causal LM Training Script
 """
 
+from numpy import block
 from datasets import Dataset, load_dataset
 from transformers import AutoTokenizer, AutoModelforCausalLM, TrainingArguments, Trainer, DataCollatorForLanguageModelling
 from itertools import chain
@@ -77,6 +78,8 @@ def chunk_text(examples, block_size=1024):
 
     ## compute total_length of all the texts
     total_length = len(concatenated_examples[list(examples.keys())[0]])
+    ## drop the remainder of the block + return 0 if total_length < block_size
+    total_length = (total_length // block_size) * block_size
 
     ## split into chunks of block_size
     result = dict()
