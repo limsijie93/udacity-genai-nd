@@ -106,7 +106,33 @@ data_collator = DataCollatorForLanguageModelling(tokenizer=tokenizer,
 training_args = TrainingArguments(output_dir="finetune_gpt2")
 
 ## Define Trainer
-trainer = Trainer(model=MODEL_NAME,
+trainer = Trainer(model=model,
                   args=training_args,
                   train_dataset=dataset,
                   data_collator=data_collator)
+
+## Start training
+trainer.train()
+
+######################### Inference #########################################
+
+## Specify input_string
+input_string = "Cross-Site Scripting is a vulnerability that"
+
+## tokenize input string
+input_ids = tokenizer(input_string, return_tensors="pt").input_ids
+
+## Inference: Generate model output_ids
+outputs = model.generate(input_ids, num_beams=10,
+                         num_return_sequences=1,
+                         no_repeat_ngram_size=1,
+                         remove_invalid_values=True)
+## num_beams controls the number of beams (i.e., possible sequences) to consider in the beam search algorithm.
+## num_return_sequences=1: This parameter controls the number of sequences to return.
+## no_repeat_ngram_size: prevents the model from generating repeated sequences of tokens.
+## remove_invalid_values: removes any invalid values from the output. The exact meaning of "invalid values" depends on the model, but it likely refers to tokens that are not in the model's vocabulary or are otherwise invalid.
+
+## Decode the output tokens into text
+output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+print(output_text)
