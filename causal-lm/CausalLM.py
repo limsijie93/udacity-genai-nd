@@ -8,7 +8,7 @@ Causal LM Training Script
 from numpy import block
 from datasets import Dataset, load_dataset
 from transformers import AutoTokenizer, AutoModelforCausalLM, TrainingArguments, Trainer, DataCollatorForLanguageModelling
-from itertools import chain
+from itertools import batched, chain
 import pandas as pd
 from pathlib import Path
 
@@ -91,3 +91,22 @@ def chunk_text(examples, block_size=1024):
         result[k] = chunks
     result["labels"] = result["input_ids"].copy()
     return result
+
+## Chunk tokenized_dataset using the chunk_text function
+dataset = tokenized_dataset.map(chunk_text, batched=True)
+
+## Setup DataCollator to be used for training
+data_collator = DataCollatorForLanguageModelling(tokenizer=tokenizer,
+                                                 mlm=False,
+                                                 return_tensors="pt")
+## mlm stands for masked language modelling. Set to True only if that's the task you want to learn
+## return_tensors specify which type of tensor you want to be returned. pt == pytorch tensor
+
+## Define training arguments
+training_args = TrainingArguments(output_dir="finetune_gpt2")
+
+## Define Trainer
+trainer = Trainer(model=MODEL_NAME,
+                  args=training_args,
+                  train_dataset=dataset,
+                  data_collator=data_collator)
