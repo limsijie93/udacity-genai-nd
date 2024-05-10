@@ -1,6 +1,5 @@
 {
-  "listings": 
-  [
+  "listings": [
     {
       "location": "Upper West Side",
       "list_price": 5899000,
@@ -80,7 +79,7 @@
       "monthly_hoa": 1200,
       "school_rating": 4.6,
       "description": "Live in the heart of Greenwich Village in this stylish 2-bedroom, 2-bathroom condo. Enjoy the building's 24-hour doorman, fitness center, and rooftop terrace with stunning city views."
-    }, 
+    },
     {
       "location": "DUMBO, Brooklyn",
       "list_price": 2999000,
@@ -90,7 +89,7 @@
       "monthly_hoa": 700,
       "school_rating": 4.4,
       "description": "Experience the best of Brooklyn in this 2-bedroom, 2-bathroom condo in DUMBO. Features include exposed brick, hardwood floors, and stunning city views from the private balcony."
-    }, 
+    },
     {
       "location": "Forest Hills, Queens",
       "list_price": 1999000,
@@ -100,7 +99,7 @@
       "monthly_hoa": 500,
       "school_rating": 4.2,
       "description": "Discover the charm of Forest Hills in this beautifully renovated 3-bedroom, 2-bathroom co-op. Features include a spacious living room, formal dining room, and a fully equipped kitchen."
-    }, 
+    },
     {
       "location": "Riverdale, Bronx",
       "list_price": 699000,
@@ -110,7 +109,7 @@
       "monthly_hoa": 400,
       "school_rating": 4.1,
       "description": "Enjoy stunning views of the Hudson River from this spacious 4-bedroom, 3-bathroom colonial home in Riverdale. Features include a large backyard, perfect for entertaining, and a garage with additional storage space."
-    }, 
+    },
     {
       "location": "Tottenville, Staten Island",
       "list_price": 599000,
@@ -170,6 +169,6 @@
       "monthly_hoa": 500,
       "school_rating": 4.2,
       "description": "Enjoy stunning views of the Verrazano Bridge from this spacious 4-bedroom, 3-bathroom colonial home in Grasmere. Features include a large backyard, perfect for entertaining, and a garage with additional storage space."
-    }  
+    }
   ]
 }
