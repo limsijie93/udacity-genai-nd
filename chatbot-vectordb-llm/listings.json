@@ -1,0 +1,175 @@
+{
+  "listings": 
+  [
+    {
+      "location": "Upper West Side",
+      "list_price": 5899000,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "square_feet": 2000,
+      "monthly_hoa": 1000,
+      "school_rating": 4.5,
+      "description": "A close-knit, environmentally-conscious community with access to organic grocery stores, community gardens, and bike paths. Take a stroll through the nearby Green Oaks Park or grab a cup of coffee at the cozy Green Bean Cafe. With easy access to public transportation and bike lanes, commuting is a breeze."
+    },
+    {
+      "location": "Williamsburg, Brooklyn",
+      "list_price": 2499000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": 1500,
+      "monthly_hoa": 800,
+      "school_rating": 4.2,
+      "description": "Experience the vibrant energy of Williamsburg in this stunning 3-bedroom, 2-bathroom condo. Enjoy breathtaking views of the Manhattan skyline from the private balcony and take advantage of the building's rooftop pool and fitness center."
+    },
+    {
+      "location": "Astoria, Queens",
+      "list_price": 1799000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "square_feet": 1200,
+      "monthly_hoa": 600,
+      "school_rating": 4.1,
+      "description": "Discover the charm of Astoria in this beautifully renovated 2-bedroom, 2-bathroom co-op. Features include hardwood floors, high ceilings, and a spacious living room with plenty of natural light. Enjoy the convenience of being just a short walk from the N/Q train."
+    },
+    {
+      "location": "Greenwich Village",
+      "list_price": 4299000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "square_feet": 1200,
+      "monthly_hoa": 1200,
+      "school_rating": 4.6,
+      "description": "Live in the heart of Greenwich Village in this stylish 2-bedroom, 2-bathroom condo. Enjoy the building's 24-hour doorman, fitness center, and rooftop terrace with stunning city views. Steps from Washington Square Park and some of the best restaurants and bars in the city."
+    },
+    {
+      "location": "Harlem",
+      "list_price": 1499000,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "square_feet": 1000,
+      "monthly_hoa": 500,
+      "school_rating": 3.9,
+      "description": "Experience the rich history and culture of Harlem in this charming 2-bedroom, 1-bathroom brownstone. Features include exposed brick, hardwood floors, and a cozy backyard perfect for entertaining. Just a short walk from the 2/3 train and some of the best soul food in the city."
+    },
+    {
+      "location": "Long Island City, Queens",
+      "list_price": 1999000,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_feet": 800,
+      "monthly_hoa": 400,
+      "school_rating": 4.0,
+      "description": "Enjoy the stunning city views and modern amenities of this 1-bedroom, 1-bathroom condo in Long Island City. Features include floor-to-ceiling windows, a private balcony, and a 24-hour doorman. Just a short walk from the 7 train and some of the best art galleries in the city."
+    },
+    {
+      "location": "Upper East Side",
+      "list_price": 6999000,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "square_feet": 3000,
+      "monthly_hoa": 1500,
+      "school_rating": 4.7,
+      "description": "Live in luxury on the Upper East Side in this expansive 5-bedroom, 4-bathroom condo. Features include a private elevator, marble floors, and a spacious living room with a fireplace. Enjoy the building's 24-hour doorman, fitness center, and rooftop terrace with breathtaking city views."
+    },
+    {
+      "location": "Greenwich Village, Manhattan",
+      "list_price": 4299000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "square_feet": 1200,
+      "monthly_hoa": 1200,
+      "school_rating": 4.6,
+      "description": "Live in the heart of Greenwich Village in this stylish 2-bedroom, 2-bathroom condo. Enjoy the building's 24-hour doorman, fitness center, and rooftop terrace with stunning city views."
+    }, 
+    {
+      "location": "DUMBO, Brooklyn",
+      "list_price": 2999000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "square_feet": 1000,
+      "monthly_hoa": 700,
+      "school_rating": 4.4,
+      "description": "Experience the best of Brooklyn in this 2-bedroom, 2-bathroom condo in DUMBO. Features include exposed brick, hardwood floors, and stunning city views from the private balcony."
+    }, 
+    {
+      "location": "Forest Hills, Queens",
+      "list_price": 1999000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": 1500,
+      "monthly_hoa": 500,
+      "school_rating": 4.2,
+      "description": "Discover the charm of Forest Hills in this beautifully renovated 3-bedroom, 2-bathroom co-op. Features include a spacious living room, formal dining room, and a fully equipped kitchen."
+    }, 
+    {
+      "location": "Riverdale, Bronx",
+      "list_price": 699000,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "square_feet": 2000,
+      "monthly_hoa": 400,
+      "school_rating": 4.1,
+      "description": "Enjoy stunning views of the Hudson River from this spacious 4-bedroom, 3-bathroom colonial home in Riverdale. Features include a large backyard, perfect for entertaining, and a garage with additional storage space."
+    }, 
+    {
+      "location": "Tottenville, Staten Island",
+      "list_price": 599000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": 1500,
+      "monthly_hoa": 300,
+      "school_rating": 4.0,
+      "description": "Welcome to this beautiful 3 bedroom, 2 bathroom single family home in Tottenville. Features include a spacious living room, formal dining room, and a fully equipped kitchen. The backyard is perfect for entertaining and has a detached garage."
+    },
+    {
+      "location": "Upper East Side, Manhattan",
+      "list_price": 5999000,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "square_feet": 1800,
+      "monthly_hoa": 1000,
+      "school_rating": 4.7,
+      "description": "Live in luxury on the Upper East Side in this stunning 3-bedroom, 3-bathroom condo. Features include a private balcony, marble floors, and a spacious living room with a fireplace."
+    },
+    {
+      "location": "Carroll Gardens, Brooklyn",
+      "list_price": 2499000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "square_feet": 1200,
+      "monthly_hoa": 600,
+      "school_rating": 4.3,
+      "description": "Experience the charm of Carroll Gardens in this beautifully renovated 2-bedroom, 2-bathroom brownstone. Features include exposed brick, hardwood floors, and a cozy backyard perfect for entertaining."
+    },
+    {
+      "location": "Jackson Heights, Queens",
+      "list_price": 1799000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": 1500,
+      "monthly_hoa": 400,
+      "school_rating": 4.1,
+      "description": "Discover the diversity of Jackson Heights in this spacious 3-bedroom, 2-bathroom co-op. Features include a large living room, formal dining room, and a fully equipped kitchen."
+    },
+    {
+      "location": "Pelham Parkway, Bronx",
+      "list_price": 499000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_feet": 1200,
+      "monthly_hoa": 300,
+      "school_rating": 3.9,
+      "description": "Welcome to this beautiful 3 bedroom, 2 bathroom single family home in Pelham Parkway. Features include a spacious living room, formal dining room, and a fully equipped kitchen. The backyard is perfect for entertaining and has a detached garage."
+    },
+    {
+      "location": "Grasmere, Staten Island",
+      "list_price": 699000,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "square_feet": 2000,
+      "monthly_hoa": 500,
+      "school_rating": 4.2,
+      "description": "Enjoy stunning views of the Verrazano Bridge from this spacious 4-bedroom, 3-bathroom colonial home in Grasmere. Features include a large backyard, perfect for entertaining, and a garage with additional storage space."
+    }  
+  ]
+}
